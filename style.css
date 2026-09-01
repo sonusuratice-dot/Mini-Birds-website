@@ -1794,10 +1794,10 @@ footer a:hover {
     .hero-image-wrapper {
 
         width:
-            min(100%, 480px);
+            min(100%, 380px);
 
         height:
-            520px;
+            420px;
 
     }
 
@@ -1805,10 +1805,10 @@ footer a:hover {
     .hero-visual::before {
 
         width:
-            280px;
+            380px;
 
         height:
-            390px;
+            450px;
 
         right:
             50%;
