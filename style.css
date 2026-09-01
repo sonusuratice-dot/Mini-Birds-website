@@ -160,7 +160,8 @@ a {
 ========================== */
 
 .hero {
-    min-height: 570px;
+    height: 500px;
+    min-height: 500px;
 
     display: flex;
 
@@ -171,6 +172,8 @@ a {
             #f5f4e9,
             #dcebea
         );
+
+    overflow: hidden;
 }
 
 
