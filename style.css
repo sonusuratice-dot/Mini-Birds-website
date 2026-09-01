@@ -193,19 +193,6 @@ a {
 
 /* RIGHT IMAGE */
 
-.hero-image {
-    width: 50%;
-    height: 500px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    overflow: hidden;
-
-    background: transparent;
-}
-
 
 /* FULL IMAGE — NO CROPPING */
 
