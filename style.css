@@ -4,7 +4,6 @@
 
     --teal: #17666a;
     --teal-dark: #0d4d51;
-
     --teal-light: #dcebea;
 
     --olive: #929653;
@@ -17,6 +16,10 @@
         0 10px 35px rgba(23, 63, 66, 0.10);
 }
 
+
+/* ==========================
+   RESET
+========================== */
 
 * {
     margin: 0;
@@ -43,17 +46,14 @@ body {
 
 img {
     display: block;
-
     max-width: 100%;
 }
 
 
 a {
     text-decoration: none;
-
     color: inherit;
 }
-
 
 
 /* ==========================
@@ -76,7 +76,6 @@ a {
 .top-bar span {
     margin: 0 10px;
 }
-
 
 
 /* ==========================
@@ -154,14 +153,14 @@ a {
 }
 
 
-
 /* ==========================
    HERO
 ========================== */
 
 .hero {
-    min-height: 500px;
     height: 500px;
+
+    min-height: 500px;
 
     display: flex;
 
@@ -177,7 +176,9 @@ a {
 }
 
 
-/* LEFT CONTENT */
+/* ==========================
+   HERO CONTENT
+========================== */
 
 .hero-content {
     width: 50%;
@@ -186,39 +187,18 @@ a {
         80px 5% 70px 9%;
 
     display: flex;
+
     flex-direction: column;
+
     justify-content: center;
 }
 
-
-/* RIGHT IMAGE */
-
-
-/* FULL IMAGE — NO CROPPING */
-
-.hero-image img {
-    height: 460px;
-    width: auto;
-
-    max-width: 90%;
-    max-height: 460px;
-
-    object-fit: contain;
-    object-position: center;
-
-    display: block;
-
-    flex-shrink: 0;
-}
-
-/* ==========================
-   TEXT
-========================== */
 
 .small-title {
     color: var(--olive);
 
     font-size: 14px;
+
     letter-spacing: 2px;
 
     margin-bottom: 12px;
@@ -277,9 +257,50 @@ a {
 }
 
 
+/* ==========================
+   HERO IMAGE
+   FULL IMAGE - NO CROP
+========================== */
+
+.hero-image {
+    width: 50%;
+
+    height: 500px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    overflow: hidden;
+
+    background: transparent;
+}
 
 
-/* BUTTONS */
+.hero-image img {
+    height: 480px;
+
+    width: auto;
+
+    max-width: 90%;
+
+    max-height: 480px;
+
+    object-fit: contain;
+
+    object-position: center;
+
+    display: block;
+
+    flex-shrink: 0;
+}
+
+
+/* ==========================
+   BUTTONS
+========================== */
 
 .btn {
     display: inline-flex;
@@ -330,26 +351,6 @@ a {
 }
 
 
-
-/* HERO IMAGE */
-
-.hero-image {
-    width: 50%;
-
-    min-height: 570px;
-}
-
-
-.hero-image img {
-    width: 100%;
-
-    height: 100%;
-
-    object-fit: cover;
-}
-
-
-
 /* ==========================
    COMMON SECTIONS
 ========================== */
@@ -392,7 +393,6 @@ a {
 
     color: var(--olive);
 }
-
 
 
 /* ==========================
@@ -465,7 +465,6 @@ a {
 
     color: #777;
 }
-
 
 
 /* ==========================
@@ -569,7 +568,6 @@ a {
 }
 
 
-
 /* ==========================
    WHY
 ========================== */
@@ -639,7 +637,6 @@ a {
 
     color: #777;
 }
-
 
 
 /* ==========================
@@ -724,7 +721,6 @@ a {
 }
 
 
-
 /* ==========================
    GALLERY
 ========================== */
@@ -766,7 +762,6 @@ a {
 
     margin-top: 30px;
 }
-
 
 
 /* ==========================
@@ -818,7 +813,6 @@ a {
 
     flex-wrap: wrap;
 }
-
 
 
 /* ==========================
@@ -909,7 +903,6 @@ footer a:hover {
 }
 
 
-
 /* ==========================
    WHATSAPP
 ========================== */
@@ -953,7 +946,6 @@ footer a:hover {
 }
 
 
-
 /* ==========================
    TABLET
 ========================== */
@@ -982,8 +974,22 @@ footer a:hover {
             repeat(3, 1fr);
     }
 
-}
 
+    /* TABLET HERO */
+
+    .hero-content {
+        padding-left: 6%;
+    }
+
+    .hero h1 {
+        font-size: clamp(40px, 5vw, 55px);
+    }
+
+    .hero-image img {
+        height: 450px;
+        max-width: 92%;
+    }
+}
 
 
 /* ==========================
@@ -1040,8 +1046,16 @@ footer a:hover {
     }
 
 
+    /* MOBILE HERO */
+
     .hero {
+        height: auto;
+
+        min-height: auto;
+
         flex-direction: column;
+
+        overflow: visible;
     }
 
 
@@ -1060,15 +1074,48 @@ footer a:hover {
     }
 
 
+    .hero-description {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
     .hero-buttons {
         justify-content: center;
     }
 
 
+    /* MOBILE HERO IMAGE */
+
     .hero-image {
         width: 100%;
 
-        min-height: 400px;
+        height: 450px;
+
+        min-height: 450px;
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: center;
+
+        overflow: hidden;
+    }
+
+
+    .hero-image img {
+        width: auto;
+
+        height: 430px;
+
+        max-width: 92%;
+
+        max-height: 430px;
+
+        object-fit: contain;
+
+        object-position: center;
     }
 
 
@@ -1151,17 +1198,43 @@ footer a:hover {
         grid-template-columns:
             1fr 1fr;
     }
-
 }
 
 
-
-/* SMALL MOBILE */
+/* ==========================
+   SMALL MOBILE
+========================== */
 
 @media (max-width: 450px) {
 
+    .hero-content {
+        padding-top: 45px;
+    }
+
+
     .hero h1 {
         font-size: 38px;
+    }
+
+
+    .hero-subtitle {
+        font-size: 16px;
+    }
+
+
+    .hero-image {
+        height: 420px;
+
+        min-height: 420px;
+    }
+
+
+    .hero-image img {
+        height: 400px;
+
+        max-height: 400px;
+
+        max-width: 94%;
     }
 
 
@@ -1176,5 +1249,4 @@ footer a:hover {
         grid-template-columns:
             1fr;
     }
-
 }
